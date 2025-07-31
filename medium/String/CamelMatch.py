@@ -23,7 +23,9 @@ class Solution(object):
                         break
                     i+=1
                 if i==len(item) and queries[k]!=False:
-                    queries[k]=True    
+                    queries[k]=True  
+            else:
+                queries[k]=False  
             k+=1
         return queries
           

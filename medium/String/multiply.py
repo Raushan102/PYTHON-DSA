@@ -20,12 +20,12 @@ class Solution(object):
                 digit2=ord(num2[j])-ord('0')
                 mul=digit*digit2  
                 # calculate the insert position
-                pos_low=i+j+1
-                pos_high=i+j
+                pos_high=i+j+1
+                pos_low=i+j
 
-                sum=mul+arr[pos_low]
-                arr[pos_low]=sum%10  # pick first last position integer from integer
-                arr[pos_high]+=sum//10  # add the carry
+                sum=mul+arr[pos_high]
+                arr[pos_high]=sum%10  # pick first last position integer from integer
+                arr[pos_low]+=sum//10  # add the carry
                 j-=1
             i-=1
         finalResult=""
